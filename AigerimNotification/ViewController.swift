@@ -11,9 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        LocalNotificationService.shared.registerForLatestIfPossible()
     }
 
 
+    @IBAction func requestNotification(_ sender: UIButton) {
+        LocalNotificationService.shared.registerForLatestIfPossible()
+    }
+    
 }
-
+//
